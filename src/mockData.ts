@@ -1,0 +1,156 @@
+import { Post, User } from './types';
+
+export const CURRENT_USER_ID = 'u123';
+
+export const mockUsers: Record<string, User> = {
+  u123: {
+    id: 'u123',
+    username: 'Anjali Sharma',
+    avatarUrl: 'https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&w=100&h=100',
+  },
+  u456: {
+    id: 'u456',
+    username: 'Siya Mittal',
+    avatarUrl: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100',
+  },
+  u789: {
+    id: 'u789',
+    username: 'Rahul Malhotra',
+    avatarUrl: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100&h=100',
+  },
+  u101: {
+    id: 'u101',
+    username: 'Supriya',
+    avatarUrl: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100&h=100',
+  },
+  u202: {
+    id: 'u202',
+    username: 'Rohan Sharma',
+    avatarUrl: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=100&h=100',
+  },
+};
+
+export const initialPosts: Post[] = [
+  {
+    id: 'p1',
+    userId: 'u456',
+    username: mockUsers.u456.username,
+    avatarUrl: mockUsers.u456.avatarUrl,
+    imageUrl: 'https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&w=800',
+    caption: 'I decide my vibes❤️',
+    likes: ['u123', 'u789', 'u101'],
+    comments: [
+      {
+        id: 'c1',
+        postId: 'p1',
+        userId: 'u123',
+        username: mockUsers.u123.username,
+        avatarUrl: mockUsers.u123.avatarUrl,
+        text: 'You look beautiful !!',
+        createdAt: new Date(Date.now() - 3600000).toISOString(),
+      },
+      {
+        id: 'c2',
+        postId: 'p1',
+        userId: 'u789',
+        username: mockUsers.u789.username,
+        avatarUrl: mockUsers.u789.avatarUrl,
+        text: 'Wow !! pretty.',
+        createdAt: new Date(Date.now() - 1800000).toISOString(),
+      },
+    ],
+    createdAt: new Date(Date.now() - 86400000).toISOString(),
+  },
+  {
+    id: 'p2',
+    userId: 'u789',
+    username: mockUsers.u789.username,
+    avatarUrl: mockUsers.u789.avatarUrl,
+    imageUrl: 'https://www.shutterstock.com/image-photo/cappuccino-croissant-on-table-cafe-600nw-2031486149.jpg?auto=compress&cs=tinysrgb&w=800',
+    caption: 'Morning coffee setup. Starting the day right.',
+    likes: ['u456', 'u202'],
+    comments: [
+      {
+        id: 'c3',
+        postId: 'p2',
+        userId: 'u456',
+        username: mockUsers.u456.username,
+        avatarUrl: mockUsers.u456.avatarUrl,
+        text: 'Love the aesthetic! What kind of coffee is that?',
+        createdAt: new Date(Date.now() - 7200000).toISOString(),
+      },
+    ],
+    createdAt: new Date(Date.now() - 172800000).toISOString(),
+  },
+  {
+    id: 'p3',
+    userId: 'u101',
+    username: mockUsers.u101.username,
+    avatarUrl: mockUsers.u101.avatarUrl,
+    imageUrl: 'https://www.modernfilipina.ph/wp-content/uploads/2025/06/shutterstock_1106988680-1600x1067.jpg?auto=compress&cs=tinysrgb&w=800',
+    caption: 'Mountain hiking adventure. The view from the top was absolutely worth the climb!',
+    likes: ['u123', 'u456', 'u789', 'u202'],
+    comments: [
+      {
+        id: 'c4',
+        postId: 'p3',
+        userId: 'u789',
+        username: mockUsers.u789.username,
+        avatarUrl: mockUsers.u789.avatarUrl,
+        text: 'Epic! How long did the hike take?',
+        createdAt: new Date(Date.now() - 14400000).toISOString(),
+      },
+      {
+        id: 'c5',
+        postId: 'p3',
+        userId: 'u101',
+        username: mockUsers.u101.username,
+        avatarUrl: mockUsers.u101.avatarUrl,
+        text: 'About 4 hours up, 3 hours down. Totally worth it!',
+        createdAt: new Date(Date.now() - 10800000).toISOString(),
+      },
+      {
+        id: 'c6',
+        postId: 'p3',
+        userId: 'u202',
+        username: mockUsers.u202.username,
+        avatarUrl: mockUsers.u202.avatarUrl,
+        text: 'Adding this to my bucket list!',
+        createdAt: new Date(Date.now() - 7200000).toISOString(),
+      },
+    ],
+    createdAt: new Date(Date.now() - 259200000).toISOString(),
+  },
+  {
+    id: 'p4',
+    userId: 'u202',
+    username: mockUsers.u202.username,
+    avatarUrl: mockUsers.u202.avatarUrl,
+    imageUrl: 'https://images.pexels.com/photos/1045534/pexels-photo-1045534.jpeg?cs=srgb&dl=pexels-catiamatos-1045534.jpg&fm=jpg?auto=compress&cs=tinysrgb&w=800',
+    caption: 'Urban exploration. Found this amazing street art in the city.',
+    likes: ['u456'],
+    comments: [],
+    createdAt: new Date(Date.now() - 345600000).toISOString(),
+  },
+  {
+    id: 'p5',
+    userId: 'u456',
+    username: mockUsers.u456.username,
+    avatarUrl: mockUsers.u456.avatarUrl,
+    imageUrl: 'https://images.pexels.com/photos/1907784/pexels-photo-1907784.jpeg?cs=srgb&dl=pexels-rickyrecap-1907784.jpg&fm=jpg?auto=compress&cs=tinysrgb&w=800',
+    caption: 'Cozy reading corner. Perfect spot for a quiet afternoon.',
+    likes: ['u123', 'u101'],
+    comments: [
+      {
+        id: 'c7',
+        postId: 'p5',
+        userId: 'u123',
+        username: mockUsers.u123.username,
+        avatarUrl: mockUsers.u123.avatarUrl,
+        text: 'So peaceful! What are you reading?',
+        createdAt: new Date(Date.now() - 21600000).toISOString(),
+      },
+    ],
+    createdAt: new Date(Date.now() - 432000000).toISOString(),
+  },
+];
