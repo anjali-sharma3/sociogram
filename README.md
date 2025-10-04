@@ -6,6 +6,9 @@ A production-ready user-generated content feed named as "Sociogram"  built with 
 
 This project demonstrates a lightweight Instagram-style feed with proper data modeling, state management, and responsive UI design. The application focuses on clean architecture, type safety, and optimal user experience with features like optimistic updates and localStorage persistence.
 
+## Netlify Link: 
+https://sociogram2.netlify.app/
+
 ## Features
 
 ### Core Functionality
